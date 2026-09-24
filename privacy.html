@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Poster — Privacy Policy</title>
+<style>
+  :root { --bg:#fbfaf8; --fg:#1b1b19; --muted:#5d5b55; --rule:#e2ded6; --acc:#b3801f; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#12140f; --fg:#eceadf; --muted:#a3a093; --rule:#2c2f26; --acc:#e0b055; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; }
+  main { max-width: 42rem; margin:0 auto; padding: 4rem 16px 6rem; }
+  h1 { font-size: 1.9rem; line-height:1.2; margin:0 0 .4rem; letter-spacing:-.01em; }
+  .meta { color:var(--muted); font-size:.9rem; margin:0 0 2.5rem; padding-bottom:1.5rem; border-bottom:1px solid var(--rule); }
+  h2 { font-size:1.1rem; margin:2.4rem 0 .6rem; }
+  p, li { color:var(--fg); }
+  ul { padding-left:1.2rem; }
+  li { margin:.3rem 0; }
+  a { color:var(--acc); }
+  .note { border-left:3px solid var(--acc); padding:.2rem 0 .2rem 1rem; color:var(--muted); }
+  footer { margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--rule); color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Poster · last updated 24 September 2026</p>
+
+  <p>Poster is a self-hosted publishing tool. It schedules videos and posts them to social media accounts that the operator of the installation owns and has connected themselves. There is no hosted service, no sign-up, and no user base: each installation is run by one person, on their own server, for their own accounts.</p>
+
+  <p class="note">This policy describes the software and the reference installation run by its author. Anyone who deploys their own copy is the operator of that copy and responsible for it.</p>
+
+  <h2>What the software stores</h2>
+  <ul>
+    <li><strong>Access tokens</strong> for the connected accounts (TikTok, YouTube, Instagram, VK), encrypted at rest in the operator's own database.</li>
+    <li><strong>Videos and captions</strong> the operator uploads for publishing, stored as files on the operator's own server.</li>
+    <li><strong>Publishing records</strong>: the time of a post, the platform, the resulting post id and URL, and any error the platform returned.</li>
+    <li><strong>Public performance data</strong> read back from the platforms: view, like, comment and share counts, follower counts, and the text of comments left on the operator's own posts.</li>
+  </ul>
+
+  <h2>What the software does not do</h2>
+  <ul>
+    <li>It does not collect data about anyone other than the operator's own accounts and the public engagement on the operator's own posts.</li>
+    <li>It does not sell, rent or share data with third parties, and contains no advertising or analytics trackers.</li>
+    <li>It does not read private messages, friend lists, or any content belonging to other users.</li>
+    <li>It does not transfer data anywhere except to the platform APIs required to publish a post and read its public statistics.</li>
+  </ul>
+
+  <h2>Where data goes</h2>
+  <p>Data stays on the operator's own server and the platform APIs it talks to: TikTok, YouTube (Google), Instagram (Meta) and VK. Each of those platforms handles the data it receives under its own privacy policy. Uploaded video files are served to platforms that fetch media by URL (Instagram and TikTok) over links that expire after a few hours.</p>
+
+  <h2>Retention and deletion</h2>
+  <p>Publishing records and statistics are kept for as long as the operator finds them useful and can be deleted from the database at any time. Disconnecting an account deletes its stored tokens. Removing the installation removes all stored data. Revoking Poster's access from within a platform's own settings immediately stops all further access, regardless of what is stored locally.</p>
+
+  <h2>Security</h2>
+  <p>Access tokens are encrypted with a key held only by the operator; a copy of the database without that key does not grant access to any account. The management API requires a bearer token; only the media endpoint used by platforms to fetch a video is reachable without one, and its links are signed and short-lived.</p>
+
+  <h2>Children</h2>
+  <p>Poster is a tool for the operator of the installation and is not directed at children.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the updated version is published at this address with a new date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy or about data held by the reference installation: <a href="mailto:naigaod@gmail.com">naigaod@gmail.com</a>.</p>
+
+  <footer>Poster · <a href="terms.html">Terms of Service</a></footer>
+</main>
+</body>
+</html>
