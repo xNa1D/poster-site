@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Poster — authorization callback</title>
+<title>Poster — возврат после авторизации</title>
 <link rel="alternate" hreflang="en" href="https://xna1d.com/callback.html">
 <link rel="alternate" hreflang="ru" href="https://xna1d.ru/callback.html">
 <style>
@@ -24,11 +24,11 @@
 </head>
 <body>
 <main>
-  <nav class="lang"><a href="https://xna1d.ru/callback.html" hreflang="ru" lang="ru">Русский</a></nav>
-  <h1 id="title">Authorization callback</h1>
-  <p id="hint">Reading the response…</p>
+  <nav class="lang"><a href="https://xna1d.com/callback.html" hreflang="en" lang="en">English</a></nav>
+  <h1 id="title">Возврат после авторизации</h1>
+  <p id="hint">Читаю ответ…</p>
   <div class="box"><code id="value">—</code></div>
-  <button id="copy" hidden>Copy</button>
+  <button id="copy" hidden>Скопировать</button>
   <p><a href="./">Poster</a></p>
 </main>
 <script>
@@ -42,21 +42,21 @@
   const copy = document.getElementById('copy');
   const err = q.get('error') || q.get('error_description');
   if (err) {
-    title.textContent = 'Authorization was refused';
+    title.textContent = 'Авторизация отклонена';
     title.className = 'err';
-    hint.textContent = 'The platform returned an error:';
+    hint.textContent = 'Площадка вернула ошибку:';
     value.textContent = err;
   } else if (q.get('code')) {
-    title.textContent = 'Authorized';
-    hint.textContent = 'Copy this whole address and paste it into the waiting terminal:';
+    title.textContent = 'Авторизовано';
+    hint.textContent = 'Скопируйте весь адрес и вставьте его в ожидающий терминал:';
     value.textContent = location.href;
     copy.hidden = false;
     copy.onclick = async () => {
-      try { await navigator.clipboard.writeText(location.href); copy.textContent = 'Copied'; }
-      catch { copy.textContent = 'Select the text above and copy it'; }
+      try { await navigator.clipboard.writeText(location.href); copy.textContent = 'Скопировано'; }
+      catch { copy.textContent = 'Выделите текст выше и скопируйте'; }
     };
   } else {
-    hint.textContent = 'Nothing to show — this page is opened by the platform after you authorize an account.';
+    hint.textContent = 'Показывать нечего: эту страницу открывает площадка после авторизации аккаунта.';
     value.textContent = '—';
   }
 </script>

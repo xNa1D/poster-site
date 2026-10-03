@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Poster — Valentin Moskalev</title>
+<meta name="description" content="Self-hosted scheduling and publishing for short-form video across TikTok, YouTube, Instagram and VK.">
+<link rel="alternate" hreflang="en" href="https://xna1d.com/poster.html">
+<link rel="alternate" hreflang="ru" href="https://xna1d.ru/poster.html">
+<style>
+  :root { --bg:#fbfaf8; --fg:#1b1b19; --muted:#5d5b55; --rule:#e2ded6; --acc:#b3801f; --card:#fff; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#12140f; --fg:#eceadf; --muted:#a3a093; --rule:#2c2f26; --acc:#e0b055; --card:#191c15; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; }
+  main { max-width: 46rem; margin:0 auto; padding: 5rem 16px 6rem; }
+  .logo { width:72px; height:72px; margin-bottom:1.75rem; display:block; }
+  h1 { font-size:2.4rem; line-height:1.1; margin:0 0 .5rem; letter-spacing:-.02em; }
+  .lede { font-size:1.15rem; color:var(--muted); margin:0 0 3rem; max-width:34rem; }
+  h2 { font-size:1.05rem; margin:0 0 .5rem; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); gap:1rem; margin-bottom:3rem; }
+  .card { background:var(--card); border:1px solid var(--rule); border-radius:12px; padding:1.25rem; }
+  .card p { margin:0; color:var(--muted); font-size:.95rem; }
+  .plats { display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:3rem; }
+  .plats span { border:1px solid var(--rule); border-radius:999px; padding:.3rem .85rem; font-size:.9rem; color:var(--muted); }
+  footer { padding-top:1.75rem; border-top:1px solid var(--rule); color:var(--muted); font-size:.9rem; }
+  a { color:var(--acc); }
+  .lang { text-align:right; font-size:.9rem; margin:0 0 1.5rem; }
+</style>
+</head>
+<body>
+<main>
+  <nav class="lang"><a href="https://xna1d.ru/poster.html" hreflang="ru" lang="ru">Русский</a></nav>
+  <svg class="logo" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b2b24"/><stop offset="1" stop-color="#0e1713"/></linearGradient>
+      <linearGradient id="acc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5c24a"/><stop offset="1" stop-color="#e09a2c"/></linearGradient>
+    </defs>
+    <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+    <g stroke="url(#acc)" stroke-width="16" stroke-linecap="round" fill="none" opacity="0.55">
+      <path d="M256 268 L140 176"/><path d="M256 268 L372 176"/><path d="M256 268 L140 360"/><path d="M256 268 L372 360"/>
+    </g>
+    <g fill="url(#acc)"><circle cx="140" cy="176" r="26"/><circle cx="372" cy="176" r="26"/><circle cx="140" cy="360" r="26"/><circle cx="372" cy="360" r="26"/></g>
+    <circle cx="256" cy="268" r="62" fill="url(#acc)"/>
+    <path d="M238 240 L288 268 L238 296 Z" fill="#0e1713"/>
+  </svg>
+
+  <h1>Poster</h1>
+  <p class="lede">A self-hosted tool that schedules one finished video and publishes it to every channel you run — then tells you how it did.</p>
+
+  <div class="plats"><span>TikTok</span><span>YouTube</span><span>Instagram</span><span>VK</span></div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Schedule once</h2>
+      <p>Upload the export, write the caption, pick a time. Each platform is published independently, so one failure never blocks the rest.</p>
+    </div>
+    <div class="card">
+      <h2>Honest retries</h2>
+      <p>A network failure is retried on a backoff; a rejected format is not. Nothing is published twice, and a post that never went out says so.</p>
+    </div>
+    <div class="card">
+      <h2>Numbers that stay</h2>
+      <p>Views, likes, comments, shares and followers are captured on day 1, 3, 7 and 30 — as snapshots, so growth is visible, not overwritten.</p>
+    </div>
+    <div class="card">
+      <h2>Your server, your tokens</h2>
+      <p>No hosted service and no account with us. Access tokens live encrypted in your own database, on your own machine.</p>
+    </div>
+  </div>
+
+  <footer>
+    <a href="./">Valentin Moskalev</a> · <a href="terms.html">Terms of Service</a> · <a href="privacy.html">Privacy Policy</a> · <a href="mailto:naigaod@gmail.com">naigaod@gmail.com</a>
+  </footer>
+</main>
+</body>
+</html>
