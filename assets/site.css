@@ -168,7 +168,7 @@ section { padding: clamp(3.5rem, 8vw, 6.5rem) 0 0; }
 /* ---------- Проекты ---------- */
 .projects { list-style: none; margin: 0; padding: 0; border-top: 1px solid rgba(247, 245, 240, .12); }
 .projects li { border-bottom: 1px solid rgba(247, 245, 240, .12); }
-.projects a {
+.projects a, .projects .row {
   display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 1rem 2rem; align-items: center;
   padding: 1.6rem 0; text-decoration: none; color: var(--paper);
 }
